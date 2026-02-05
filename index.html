@@ -3,166 +3,128 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>LATAM Roleplay | Roblox</title>
-
+<title>VALENCRAFT254 | Staff Portfolio</title>
 <style>
 :root {
-    --azul: #2563eb;
-    --negro: #000000;
+    --azul: #3b82ff;
+    --negro: #050505;
     --gris: #0f0f0f;
-    --borde: rgba(255,255,255,0.1);
+    --borde: rgba(255,255,255,0.08);
+    --verde-fundador: linear-gradient(90deg, #00ff00, #00cc00);
+    --rgb-animation: linear-gradient(270deg, #ff00ff, #00ffff, #ff9900, #00ff00);
 }
 
-/* BASE */
+/* Base */
 body {
     margin: 0;
     font-family: 'Segoe UI', Arial, sans-serif;
-    background: linear-gradient(180deg, #050505, #000);
+    background: radial-gradient(circle at top, #0b0b1a 0%, #050505 100%);
     color: white;
 }
 
-/* NAVBAR */
-.navbar {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    padding: 20px;
-    background: rgba(0,0,0,0.9);
-    border-bottom: 1px solid var(--borde);
-    position: sticky;
-    top: 0;
-    z-index: 10;
-}
-
-.navbar a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    opacity: 0.8;
-    transition: 0.2s;
-}
-
-.navbar a:hover {
-    color: var(--azul);
-    opacity: 1;
-}
-
-/* CONTAINER */
-.container {
-    max-width: 1000px;
-    margin: auto;
-    padding: 50px 20px;
-    text-align: center;
-}
-
-/* IMAGE */
-.logo {
-    max-width: 320px;
-    border-radius: 25px;
-    box-shadow: 0 0 40px rgba(37,99,235,0.4);
-    margin-bottom: 30px;
-}
-
-/* TITLE */
+/* Título */
 h1 {
-    font-size: 42px;
-    letter-spacing: 2px;
-    margin-bottom: 15px;
+    text-align: center;
+    margin-top: 20px;
+    background: -webkit-linear-gradient(#3b82ff, #00ff00, #ff00ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
-.subtitle {
-    opacity: 0.75;
-    font-size: 18px;
-    margin-bottom: 50px;
+/* Container de Staff */
+.staff-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 40px;
 }
 
-/* SECTION */
-.section {
-    background: var(--gris);
-    border: 1px solid var(--borde);
-    border-radius: 25px;
-    padding: 35px;
-    margin-bottom: 50px;
-    box-shadow: 0 0 30px rgba(0,0,0,0.7);
+/* Tarjeta de miembro */
+.staff-card {
+    background: #111;
+    border: 2px solid var(--borde);
+    border-radius: 12px;
+    width: 220px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s, border 0.3s, box-shadow 0.3s;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
-.section h2 {
-    color: var(--azul);
-    margin-bottom: 15px;
+.staff-card:hover {
+    transform: translateY(-5px);
+    border: 2px solid var(--azul);
+    box-shadow: 0 0 20px #3b82ff, 0 0 30px #ff00ff, 0 0 40px #00ff00;
 }
 
-.section p {
-    font-size: 18px;
-    opacity: 0.85;
-    line-height: 1.6;
+/* Foto tipo Discord */
+.staff-photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    object-fit: cover;
+    border: 3px solid;
+    border-image-slice: 1;
+    border-width: 3px;
+    border-image-source: var(--rgb-animation);
+    animation: rgbBorder 4s linear infinite;
 }
 
-/* BUTTON */
-.button {
-    display: inline-block;
-    margin-top: 30px;
-    padding: 16px 40px;
-    font-size: 18px;
+@keyframes rgbBorder {
+    0% { border-image-source: linear-gradient(0deg, #ff00ff, #00ffff, #ff9900, #00ff00); }
+    25% { border-image-source: linear-gradient(90deg, #00ffff, #ff9900, #00ff00, #ff00ff); }
+    50% { border-image-source: linear-gradient(180deg, #ff9900, #00ff00, #ff00ff, #00ffff); }
+    75% { border-image-source: linear-gradient(270deg, #00ff00, #ff00ff, #00ffff, #ff9900); }
+    100% { border-image-source: linear-gradient(360deg, #ff00ff, #00ffff, #ff9900, #00ff00); }
+}
+
+/* Nombre */
+.staff-name {
+    font-size: 1.1em;
     font-weight: bold;
-    color: white;
-    text-decoration: none;
-    background: linear-gradient(90deg, #2563eb, #1d4ed8);
-    border-radius: 35px;
-    box-shadow: 0 0 30px rgba(37,99,235,0.7);
-    transition: transform 0.2s, box-shadow 0.2s;
+    margin-bottom: 5px;
 }
 
-.button:hover {
-    transform: scale(1.08);
-    box-shadow: 0 0 45px rgba(37,99,235,1);
-}
-
-/* FOOTER */
-footer {
-    margin-top: 60px;
-    opacity: 0.5;
+/* Rol */
+.staff-role {
+    font-size: 0.9em;
+    color: #00ff00; /* verde Fundador */
+    background: rgba(0,255,0,0.1);
+    padding: 3px 8px;
+    border-radius: 6px;
+    display: inline-block;
+    font-weight: bold;
 }
 </style>
 </head>
-
 <body>
 
-<!-- NAV -->
-<div class="navbar">
-    <a href="#inicio">Inicio</a>
-    <a href="https://discord.gg/hTyGjWkaB8" target="_blank">Discord</a>
-    <a href="https://www.tiktok.com/@panama_rplivesoficial?_r=1&_t=ZS-93d6X0QqXga" target="_blank">TikTok</a>
-</div>
+<h1>Staff Fundador</h1>
 
-<div class="container" id="inicio">
-
-    <!-- IMAGE -->
-    <img src="logo.png" alt="LATAM Roleplay" class="logo">
-
-    <!-- TITLE -->
-    <h1>LATAM ROLEPLAY</h1>
-    <div class="subtitle">Experiencia Roleplay seria dentro de Roblox</div>
-
-    <!-- RP INFO -->
-    <div class="section">
-        <h2>🎭 ¿Qué es nuestro Roleplay?</h2>
-        <p>
-            LATAM Roleplay es una comunidad dedicada al roleplay serio dentro de Roblox.
-            Creamos historias realistas, normas claras y una experiencia inmersiva para
-            todos los jugadores que buscan algo más que un juego común.
-        </p>
+<div class="staff-container">
+    <div class="staff-card">
+        <img src="https://placekitten.com/100/100" alt="itsnova91" class="staff-photo">
+        <div class="staff-name">itsnova91</div>
+        <div class="staff-role">Fundador</div>
     </div>
-
-    <!-- BUTTON -->
-    <a class="button" href="https://www.roblox.com/es/games/140512109364570/Latam-Roleplay?gameSetTypeId=100000003&homePageSessionInfo=edccb13c-23a1-4682-990a-107013f4948a&isAd=false&numberOfLoadedTiles=181&page=homePage&placeId=140512109364570&playContext=homePage&position=24&positionInRow=0.9000000000000012&rowOnPage=8&sortPos=1&universeId=9517089877" target="_blank">
-        ENTRAR
-    </a>
-
-    <footer>
-        © 2026 • LATAM Roleplay • Roblox
-    </footer>
-
+    <div class="staff-card">
+        <img src="https://placekitten.com/101/101" alt="luisito.v.17_01107" class="staff-photo">
+        <div class="staff-name">luisito.v.17_01107</div>
+        <div class="staff-role">Fundador</div>
+    </div>
+    <div class="staff-card">
+        <img src="https://placekitten.com/102/102" alt="valencraf" class="staff-photo">
+        <div class="staff-name">valencraf</div>
+        <div class="staff-role">Fundador</div>
+    </div>
+    <div class="staff-card">
+        <img src="https://placekitten.com/103/103" alt="david_roblox0363_90312" class="staff-photo">
+        <div class="staff-name">david_roblox0363_90312</div>
+        <div class="staff-role">Fundador</div>
+    </div>
 </div>
 
 </body>
-  </html>
+</html>
