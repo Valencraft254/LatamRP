@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Staff</title>
+<style>
+:root {
+    --azul: #3b82ff;
+    --negro: #050505;
+    --gris: #0f0f0f;
+    --borde: rgba(255,255,255,0.08);
+}
+
+/* Base */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #050505;
+    color: white;
+}
+
+/* Container de Staff */
+.staff-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 40px;
+}
+
+/* Tarjeta de miembro */
+.staff-card {
+    background: #111;
+    border: 2px solid var(--borde);
+    border-radius: 12px;
+    width: 220px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s, border 0.3s;
+}
+
+.staff-card:hover {
+    transform: translateY(-5px);
+    border: 2px solid var(--azul);
+}
+
+/* Foto tipo Discord */
+.staff-photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    object-fit: cover;
+    border: 3px solid #00ff00; /* verde Fundador */
+}
+
+/* Nombre */
+.staff-name {
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Rol */
+.staff-role {
+    font-size: 0.9em;
+    color: #00ff00;
+    background: rgba(0,255,0,0.1);
+    padding: 3px 8px;
+    border-radius: 6px;
+    display: inline-block;
+    font-weight: bold;
+}
+</style>
+</head>
+<body>
+
+<!-- Aquí iría tu contenido base actual -->
+
+<!-- SECCIÓN FUNDADORES -->
+<h2 style="text-align:center; margin-top:30px;">Fundadores</h2>
+<div class="staff-container">
+    <div class="staff-card">
+        <img src="https://placekitten.com/100/100" alt="itsnova91" class="staff-photo">
+        <div class="staff-name">itsnova91</div>
+        <div class="staff-role">Fundador</div>
+    </div>
+    <div class="staff-card">
+        <img src="https://placekitten.com/101/101" alt="luisito.v.17_01107" class="staff-photo">
+        <div class="staff-name">luisito.v.17_01107</div>
+        <div class="staff-role">Fundador</div>
+    </div>
+    <div class="staff-card">
+        <img src="https://placekitten.com/102/102" alt="valencraf" class="staff-photo">
+        <div class="staff-name">valencraf</div>
+        <div class="staff-role">Fundador</div>
+    </div>
+    <div class="staff-card">
+        <img src="https://placekitten.com/103/103" alt="david_roblox0363_90312" class="staff-photo">
+        <div class="staff-name">david_roblox0363_90312</div>
+        <div class="staff-role">Fundador</div>
+    </div>
+</div>
+
+</body>
+</html>
